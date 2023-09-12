@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// Define a structure to represent an edge in the graph
+//  to represent an edge in the graph
 struct Edge {
     int v;      // Destination vertex
     int w;      // Weight of the edge
