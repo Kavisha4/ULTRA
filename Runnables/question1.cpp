@@ -1,8 +1,16 @@
-// #include <iostream>
-// #include <fstream>
-// #include <string>
-// #include <vector>
-// #include "/Commands/BenchmarkMultimodal.h"
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+// What we know
+// 1. We need to use the loaddimacs function from the NetworkIO file in the Runnables to read the Dimacs file (.gr)
+// 2. Then we need to use the run functions from the Disjktras.h and pass 200 random points
+// 3. Then run the driver code using g++ question1.cpp
+
+// Methods to try
+// 1. Without using .gr file we can try to write a code to store the u,v,w in the a map and keep passing the 200 points to the graph structure in Dijsktras.h
+
 
 // void initializeGraph(const std::string& filePath) {
 //     std::ifstream file(filePath);
@@ -41,7 +49,7 @@
 //     return graph;
 // }
 
-// int main()
+int main()
 // {
 //         graph = initializeGraph("USA-road-d.FLA.gr");
 
@@ -71,6 +79,9 @@
 //     return 0;
 // }
 // }
+
+// 2. Use the default .gr file and use loaddimacs
+ 
 
 #include <iostream>
 #include <fstream>
@@ -155,7 +166,6 @@ int main() {
         int destination = sourceDestPairs[i].second;
 
         // Create a Dijkstra object to run it
-        // You may need to update the Dijkstra class instantiation based on your implementation
         // Dijkstra<Graph> dijkstra(graph);
 
         // Measure the runtime
